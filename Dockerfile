@@ -1,0 +1,6 @@
+FROM python:3.11-slim
+WORKDIR /app
+COPY UMA_BOT/ /app/
+ENV PYTHONUNBUFFERED=1 UMA_CLOUD=1 PORT=8766
+EXPOSE 8766
+CMD ["python", "uma_server.py"]
